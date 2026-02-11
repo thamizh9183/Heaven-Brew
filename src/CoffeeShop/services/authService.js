@@ -1,6 +1,6 @@
 // src/services/authService.js
 
-const API = "http://localhost:5000/api/auth";
+const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api/auth";
 
 /**
  *  Signup — create a new user

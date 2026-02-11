@@ -81,7 +81,7 @@ const CartPage = () => {
                     item.image
                       ? item.image.startsWith("http")
                         ? item.image
-                        : `http://localhost:5000/uploads/${item.image}`
+                        : `https://brew-heaven-cafe-backend-tk0o.onrender.com/uploads/${item.image}`
                       : "https://via.placeholder.com/100"
                   }
                   alt={item.name}

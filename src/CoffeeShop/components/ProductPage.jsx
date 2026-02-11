@@ -47,7 +47,7 @@ const ProductPage = () => {
                 item.image
                   ? item.image.startsWith("http")
                     ? item.image
-                    : `http://https://brew-heaven-cafe-backend-tk0o.onrender.com/uploads/${item.image}`
+                    : `https://brew-heaven-cafe-backend-tk0o.onrender.com/uploads/${item.image}`
                   : "https://via.placeholder.com/180"
               }
               alt={item.name}

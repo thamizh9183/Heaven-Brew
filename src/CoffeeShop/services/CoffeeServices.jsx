@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api";
 
 // Fetch all coffee (public)
 export const fetchCoffee = async () => {

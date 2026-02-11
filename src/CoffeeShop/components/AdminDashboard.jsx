@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API = "http://localhost:5000/api";
+const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api";
 
 // Headers with Bearer token
 const authHeaders = (token) => ({
