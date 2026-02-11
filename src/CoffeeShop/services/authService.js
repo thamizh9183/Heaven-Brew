@@ -1,6 +1,6 @@
 // src/services/authService.js
 
-const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api/auth";
+const BASE_URL = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api/auth";
 
 /**
  *  Signup — create a new user
@@ -8,7 +8,7 @@ const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api/auth";
  */
 export const signup = async (user) => {
   try {
-    const res = await fetch(`${API}/signup`, {
+    const res = await fetch(`${BASE_URL}/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -34,7 +34,7 @@ export const signup = async (user) => {
  */
 export const signin = async (user) => {
   try {
-    const res = await fetch(`${API}/signin`, {
+    const res = await fetch(`${BASE_URL}/signin`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -68,7 +68,7 @@ export const signin = async (user) => {
  */
 export const loginAdmin = async (admin) => {
   try {
-    const res = await fetch(`${API}/admin-login`, {
+    const res = await fetch(`${BASE_URL}/admin-login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(admin),

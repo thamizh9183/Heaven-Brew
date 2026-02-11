@@ -1,4 +1,5 @@
-const API = "https://brew-heaven-cafe-backend-tk0o.onrender.com/api";
+const BASE_URL = "https://brew-heaven-backend-tk0o.onrender.com/api";
+
 
 // Fetch all coffee (public)
 export const fetchCoffee = async () => {
@@ -47,7 +48,7 @@ export const updateCoffee = async (id, formData, token) => {
 export const deleteCoffee = async (id, token) => {
   if (!token) throw new Error("Unauthorized: No token provided");
 
-  const res = await fetch(`${API}/coffees/${id}`, {
+  const res = await fetch(`${BASE_URL}/coffees/${id}`, {
     method: "DELETE",
     headers: authHeaders(token),
   });
