@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://heaven-brew-backend-p11b.onrender.com/api"
+  baseURL: "https://brew-heaven-backend-tk0o.onrender.com/api"
 
 });
 
