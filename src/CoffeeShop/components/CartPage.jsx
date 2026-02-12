@@ -79,7 +79,7 @@ const CartPage = () => {
                 <img
                   src={
                     item.image
-                      ? item.image.startsWith("http")
+                      ? item.image.startsWith("https")
                         ? item.image
                         : `https://brew-heaven-cafe-backend-tk0o.onrender.com/uploads/${item.image}`
                       : "https://via.placeholder.com/100"

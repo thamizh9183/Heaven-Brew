@@ -1,4 +1,4 @@
-const BASE_URL = "https://brew-heaven-backend-tk0o.onrender.com/api";
+const API = import.meta.env.VITE_BACKEND_URL;
 
 
 // Fetch all coffee (public)
@@ -48,7 +48,7 @@ export const updateCoffee = async (id, formData, token) => {
 export const deleteCoffee = async (id, token) => {
   if (!token) throw new Error("Unauthorized: No token provided");
 
-  const res = await fetch(`${BASE_URL}/coffees/${id}`, {
+  const res = await fetch(`${API}/coffees/${id}`, {
     method: "DELETE",
     headers: authHeaders(token),
   });

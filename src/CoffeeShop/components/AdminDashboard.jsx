@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-const BASE_URL = "https://brew-heaven-backend-tk0o.onrender.com/api";
+const API = import.meta.env.VITE_BACKEND_URL;
 ;
 
 // Headers with Bearer token
@@ -11,7 +10,7 @@ const authHeaders = (token) => ({
 
 // Fetch all users
 const fetchUsers = async (token) => {
-  const res = await fetch(`${BASE_URL}/users`, { headers: authHeaders(token) });
+  const res = await fetch(`${API}/users`, { headers: authHeaders(token) });
   if (!res.ok) {
     const err = await res.json();
     throw new Error(err.message || "Failed to fetch users");
@@ -21,7 +20,7 @@ const fetchUsers = async (token) => {
 
 // Delete a user
 const deleteUser = async (id, token) => {
-  const res = await fetch(`${BASE_URL}/users/${id}`, {
+  const res = await fetch(`${API}/users/${id}`, {
     method: "DELETE",
     headers: authHeaders(token),
   });
@@ -34,7 +33,7 @@ const deleteUser = async (id, token) => {
 
 // Update a user
 const updateUser = async (id, token, data) => {
-  const res = await fetch(`${BASE_URL}/users/${id}`, {
+  const res = await fetch(`${API}/users/${id}`, {
     method: "PUT",
     headers: authHeaders(token),
     body: JSON.stringify(data),
