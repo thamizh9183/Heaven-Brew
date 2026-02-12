@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 const API = import.meta.env.VITE_BACKEND_URL;
-;
+
 
 // Headers with Bearer token
 const authHeaders = (token) => ({
